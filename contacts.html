@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — BitCore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Хедер (такой же, как на главной странице) -->
+  <header class="header">
+    <div class="container header__inner">
+      <nav class="header__logo">
+        <img src="./images/logo/logo1.png" alt="BitCore Logo">
+        <a href="index.html">BitCore</a>
+      </nav>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a class="active" href="index.html">ГЛАВНАЯ</a></li>
+          <li><a href="catalog.html">КАТАЛОГ</a></li>
+          <li><a href="about.html">О НАС</a></li>
+          <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Основной контент страницы "Контакты" -->
+  <main class="main">
+    <!-- Баннер -->
+    <section class="hero">
+      <h1>Контакты — BitCore</h1>
+      <p>Свяжитесь с нами для получения поддержки или консультации</p>
+    </section>
+
+    <!-- Контактная информация -->
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Наши контакты</h2>
+        <div class="contact-content">
+          <div class="contact-item">
+            <h3>Телефон</h3>
+            <p><a href="tel:+77001112233">+7 (777) 748 46 90</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:info@bitcore.kz">info@bitcore.kz</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Адрес</h3>
+            <p>Усть-Каменогорск, Казахстан</p>
+          </div>
+          <div class="contact-item">
+            <h3>Режим работы</h3>
+            <p>Пн-Пт: 9:00 - 18:00, Сб-Вс: выходной</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section class="contact-form">
+      <div class="container">
+        <h2 class="section-title">Напишите нам</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер (такой же, как на главной странице) -->
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <div class="footer__logo">
+        <img src="./images/logo/logo_c2c2c2.png" alt="BitCore">
+        <span>BitCore</span>
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Сервисный центр</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+77001112233">+7 (777) 748 46 90</a></li>
+            <li><a href="mailto:info@bitcore.kz">info@bitcore.kz</a></li>
+            <li>Усть-Каменогорск, Казахстан</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 BitCore. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
