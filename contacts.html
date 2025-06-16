@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — BitCore</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <nav class="header__logo">
+        <img src="./images/logo/logo1.png" alt="BitCore Logo">
+        <a href="index.html">BitCore</a>
+      </nav>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="index.html">ГЛАВНАЯ</a></li>
+          <li><a href="service.html">УСЛУГИ</a></li>
+          <li><a href="catalog.html">КАТАЛОГ</a></li>
+          <li><a href="about.html">О НАС</a></li>
+          <li><a class="active" href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main class="main">
+      <section class="contact-map">
+        <div id="map"></div>
+      
+        <div class="map-overlay">
+          <h3>КОНТАКТЫ</h3>
+          <p><strong>Мы ждём вас по адресу:</strong><br>
+            Усть-Каменогорск, ул. Багдат Шаяхметов, 17<br>
+            E-mail: info@bitcore.kz<br>
+            Телефон: +7 (777) 748 46 90<br>
+            Контактное лицо: Пьянков К.А.
+          </p>
+        </div>
+      </section>
+    
+      <section class="social">
+        <div class="container">
+          <h2>Мы в социальных сетях</h2>
+          <p>У вас есть вопросы? Обращайтесь, мы вам поможем</p>
+          <div class="social-icons">
+            <div class="social-icons">
+              <a href="https://t.me/yourchannel" target="_blank">
+                <img src="images/logo/tg.png" alt="Telegram">
+              </a>
+              <a href="https://vk.com/yourpage" target="_blank">
+                <img src="images/logo/vk.png" alt="VK">
+              </a>
+              <a href="https://wa.me/77001234567" target="_blank">
+                <img src="images/logo/wa.png" alt="WhatsApp">
+              </a>
+              <a href="https://instagram.com/yourprofile" target="_blank">
+                <img src="images/logo/inst.png" alt="Instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <div class="footer__logo">
+        <img src="./images/logo/logo_c2c2c2.png" alt="BitCore">
+        <span>BitCore</span>
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="service.html">Сервисный центр</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+77001112233">+7 (777) 748 46 90</a></li>
+            <li><a href="mailto:info@bitcore.kz">info@bitcore.kz</a></li>
+            <li>Усть-Каменогорск, Казахстан</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 BitCore. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <p>Заявка отправлена!</p>
+      <button id="modal-close" class="btn-main">OK</button>
+    </div>
+  </div>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <!-- <script src="script.js" defer></script> -->
+
+</body>
+</html>

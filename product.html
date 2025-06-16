@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Товар — BitCore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <nav class="header__logo">
+        <img src="./images/logo/logo1.png" alt="BitCore Logo">
+        <a href="index.html">BitCore</a>
+      </nav>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="index.html">ГЛАВНАЯ</a></li>
+          <li><a class="active" href="service.html">УСЛУГИ</a></li>
+          <li><a href="catalog.html">КАТАЛОГ</a></li>
+          <li><a href="about.html">О НАС</a></li>
+          <li><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart-icon">
+        <span class="cart-count">0</span>
+        <button class="btn-main cart-toggle">Корзина</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main container">
+    <div class="product-page">
+      <div class="product-image">
+        <img id="product-img" src="" alt="">
+      </div>
+      <div class="product-details">
+        <nav class="breadcrumb">
+          <a href="catalog.html">Каталог</a> / <span id="breadcrumb-title"></span>
+        </nav>
+        <h1 id="product-title"></h1>
+        <div class="card__prices">
+          <div class="card__price card__price--discount"><span id="price-discount"></span></div>
+          <div class="card__price card__price--common"><span id="price-regular"></span></div>
+        </div>
+        <ul id="product-attributes"></ul>
+        <button class="btn-main add-to-cart">В корзину</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="related-products">
+    <div class="container">
+      <h2>Похожие товары</h2>
+      <div class="blocks__row">...</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <div class="footer__logo">
+        <img src="./images/logo/logo_c2c2c2.png" alt="BitCore">
+        <span>BitCore</span>
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="service.html">Сервисный центр</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+77001112233">+7 (777) 748 46 90</a></li>
+            <li><a href="mailto:info@bitcore.kz">info@bitcore.kz</a></li>
+            <li>Усть-Каменогорск, Казахстан</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 BitCore. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно корзины (то же, что и в catalog.html) -->
+  <div id="cart-modal" class="modal">
+    <div class="modal__content" style="max-width: 600px; width: 90%;">
+      <h2>Корзина</h2>
+      <div id="cart-items"></div>
+      <div id="cart-form" style="margin-top: 20px;">
+        <input type="text" id="cart-name" class="modal-service__input" placeholder="Имя" required>
+        <input type="tel" id="cart-phone" class="modal-service__input" placeholder="Телефон" required>
+        <input type="text" id="cart-address" class="modal-service__input" placeholder="Адрес" required>
+        <input type="date" id="cart-date" class="modal-service__input" required>
+        <select id="cart-payment" class="modal-service__input" required>
+          <option value="" disabled selected>Выберите способ оплаты</option>
+          <option value="card">Картой</option>
+          <option value="cash">Наличными</option>
+          <option value="invoice">Выставление счета</option>
+        </select>
+      </div>
+      <p>Итого: <span id="cart-total">0 ₸</span></p>
+      <div class="modal__controls">
+        <button id="cart-close" class="btn-main">Закрыть</button>
+        <button id="cart-checkout" class="btn-main">Оформить заказ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно успеха -->
+  <div id="order-success-modal" class="modal">
+    <div class="modal__content">
+      <h2>Успех</h2>
+      <p>Ваш заказ успешно отправлен!</p>
+      <button id="order-success-close" class="btn-main">OK</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно ошибки -->
+  <div id="order-error-modal" class="modal">
+    <div class="modal__content">
+      <h2>Ошибка</h2>
+      <p id="order-error-message">Пожалуйста, заполните все поля и добавьте товары в корзину</p>
+      <button id="order-error-close" class="btn-main">OK</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно локального сервера -->
+  <div id="local-server-modal" class="modal">
+    <div class="modal__content">
+      <h2>Локальный сервер</h2>
+      <p>Вы используете локальный сервер (порт 15500). Для корректной работы используйте хостинг.</p>
+      <div class="modal__controls">
+        <button id="local-server-close" class="btn-main">Закрыть</button>
+        <button id="local-server-ok" class="btn-main">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
